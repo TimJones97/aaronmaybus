@@ -133,9 +133,9 @@ $('.center').slick({
   centerPadding: '60px',
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: false
-  // autoplay: true,
-  // autoplaySpeed: 3000
+  // autoplay: false
+  autoplay: true,
+  autoplaySpeed: 3000
 });
 //Script to fade out the post when scrolled past
 // $(window).scroll(function () {
