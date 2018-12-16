@@ -20,19 +20,19 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="./files/css/pace.simple.css">
-	<link href="./files/css/style.css?v=1.2" rel="stylesheet">
+	<link href="./files/css/style.css?v=1.3" rel="stylesheet">
 </head>
 <body>
 	<div class="loading">
 	    <div class="loader-container">
-	    	<svg ng-attr-width="{{ctrl.size.value}}px" ng-attr-height="{{ctrl.size.value}}px" viewBox="0 0 100 100" ng-if="canvas.show=='img'" ng-attr-style="background:{{ctrl.bkcolor.value}}" width="150px" height="150px"><g ng-attr-style="transform:scale({{ctrl.scale.value}});transform-origin:50px 50px" style="transform:scale(1);transform-origin:50px 50px">
-	    	<image x="0" y="0" width="100" height="100" ng-attr-href="{{canvas.img || ''}}" ng-class="ctrl.animation.value + ' ' + ctrl.icon.value" ng-attr-style="animation-direction:{{ctrl.direction.value}};animation-play-state:{{ctrl.playstate.value}};animation-duration:{{ctrl.speed.value}}s;transform-origin: 50px 50px" style="animation-direction:normal;animation-play-state:running;animation-duration:1.73s;transform-origin: 50px 50px" class="ld ld-breath">
-	    	</image>
-	    	</g>
-	    	</svg>
+	    	<img src="./files/img/logo.png" class="ld ld-breath">
 		</div>
 	</div>
 	<div class="hidden-home" id="home">
+	</div>
+	<div class="fixed_bg">
+		<div class="bg_cover">
+		</div>
 	</div>
 	<div class="banner-container">
 		<!-- <div class="banner-jarallax">
@@ -100,6 +100,8 @@
      		<div class="title-center">
 				<h1>Me, Aaron</h1>
 			</div>
+			<div class="title-vertical-line">
+			</div>
 		</div>
 		<div class="bg_overlay">
 		</div>
@@ -166,6 +168,8 @@
      		<div class="title-center">
 				<h1>Insta feed</h1>
 			</div>
+			<div class="title-vertical-line">
+			</div>
 		</div>
 	</div>
 	<div class="block grey_bg">
@@ -176,12 +180,37 @@
 		    	<div class="center-middle">
 					<a class="links" id="go-home3" href="https://www.instagram.com/amaybus/" target="_blank"><img src="./files/img/logos/instagram-logo.svg" class="icon" alt="Instagram"></a><a class="links social_link" id="go-home4" href="https://www.instagram.com/amaybus/" target="_blank">View more on Instagram</a>
 				</div>
+			</div>			
+			<div class="go-up">
+				<a href="#home">
+					<img class="up-arrow" src="./files/img/icons/up-arrow.svg">
+				</a>
 			</div>
 		</section>
-		<div class="go-up">
-			<a href="#home">
-				<img class="up-arrow" src="./files/img/arrow_up.png">
-			</a>
+		<div class="footer">
+			<div class="col-md-3">
+				<img class="contact-icon-footer phone" src="./files/img/icons/phone.svg">
+				<p>Phone</p>
+				<a class="links" href="tel:0437010404"><p>0437 010 404</p></a>
+			</div>
+			<div class="col-md-3">
+				<img class="contact-icon-footer email" src="./files/img/icons/email.svg">
+				<p>Mail</p>
+				<a class="links" href="mailto:aaronmaybus@gmail.com"><p>aaronmaybus@gmail.com</p></a>
+			</div>
+			<div class="col-md-3">
+				<img class="contact-icon-footer" src="./files/img/icons/instagram.svg">
+				<p>Instagram</p>
+				<a class="links" href="https://www.instagram.com/amaybus/" target="_blank"><p>@amaybus</p></a>
+			</div>
+			<div class="col-md-3">
+				<img class="contact-icon-footer" src="./files/img/icons/linkedin.svg">
+				<p>LinkedIn</p>
+				<a class="links" href="https://www.linkedin.com/in/aaron-maybus-706a1811a" target="_blank"><p>Aaron Maybus</p></a>
+			</div>
+			<div class="col-md-12">
+				<p>&copy; Copyright Aaron Maybus 2018 | Australia | All Rights Reserved.</p>
+			</div>
 		</div>
 	</div>
 	
@@ -191,6 +220,7 @@
 <!-- Jarallax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.9.0/jarallax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.1/velocity.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="
 sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
@@ -208,6 +238,14 @@ sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossor
 	  limit: '12'
 	});
 	userFeed.run();
+	var slideUp = {
+	    distance: '300%',
+	    origin: 'bottom',
+	    opacity: 0,
+	    delay: 300
+	};
+	ScrollReveal().reveal('.pull-quote', slideUp);
+	ScrollReveal().reveal('#instafeed', slideUp);
 </script>
 
 <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->

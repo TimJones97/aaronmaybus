@@ -60,9 +60,9 @@ function initialise() {
       centerPadding: '60px',
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: false
-      // autoplay: true,
-      // autoplaySpeed: 3000
+      // autoplay: false
+      autoplay: true,
+      autoplaySpeed: 3000
     });
     $('.jarallax').jarallax({
       speed: 0.2
