@@ -149,7 +149,6 @@
   font-weight: normal;
   text-align: center;
   margin-top: 15px;
-  vertical-align: left;
   cursor: pointer;
   background-image: none;
   border: 3px solid white;
@@ -168,7 +167,7 @@
   -webkit-animation-delay: 7s;
   -moz-animation-delay: 7s;
   animation-delay: 7s;
-  margin-left: -80%;
+  opacity: 0;
 }
 .btn-animated a {
   color: white;
@@ -181,13 +180,13 @@
 
 @-webkit-keyframes slide {
     100% { 
-      margin-left: 0%;
+      opacity: 1;
     }
 }
 
 @keyframes slide {
     100% { 
-      margin-left: 0%;
+      opacity: 1;
     }
 }
 .title-block-main {
