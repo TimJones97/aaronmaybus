@@ -383,14 +383,14 @@
 }
 
 .jarallax {
-  height: 50vh;
+  height: 60vh;
 }
 .jarallax-sml {
   height: 157px;
   z-index: 0;
 }
 .media-title-block {
-  height: 50vh;
+  height: 60vh;
   position: relative;
   background: rgba(0,0,0,0.5);
 }
@@ -1298,6 +1298,11 @@ body {
   .mobileHide {
     display: block;
   }
+  .mobileHide .name-header {
+    color: #616161;
+    top: 100%;
+    left: 51%;
+  }
   .navbar-nav > li.mobileHide {
     display: block;
     border-bottom: 0px !important;
@@ -1327,7 +1332,7 @@ body {
 @media all and (max-width: 479px) {
   .navbar-toggle {
     top: 0px;
-    left: 9px;
+    left: 23px;
   }
   .title-block-main .jarallax .title-main h1 {
     font-size: 52px;
@@ -1364,7 +1369,7 @@ body {
     border-bottom: 1px solid #d5d5d5 !important;
   }
   .title-main {
-    width: 345px;
+    width: 348px;
   }
   .btn-animated {
     font-size: 12px;
@@ -1386,7 +1391,7 @@ body {
     height: 100vh;
   }
   .title-main {
-    top: 40vh;
+    top: 50vh;
   }
   .navbar-default.smaller .navbar-nav > li > a,
   .navbar-default .navbar-nav > li > a {
@@ -1420,14 +1425,14 @@ body {
     /*border-radius: 6px;*/
   }
   .animation-container {
-    height: 160px;
-    width: 160px;
+    height: 150px;
+    width: 150px;
     overflow: hidden;
     margin: 0;
     margin-bottom: 2px;
   }
   .instagram-img {
-    height: 160px;
+    height: 150px;
   }
   .insta-overlay {
     height: 30px;
@@ -1439,9 +1444,6 @@ body {
   }
   .img-info {
     padding-bottom: 5px;
-  }
-  #instafeed {
-    padding-bottom: 45px;
   }
   .jarallax .title-center h1, h1 {
     font-size: 26px;
@@ -1457,14 +1459,23 @@ body {
     right: 4px;
   }
   #instafeed {
-    width: 350px;
+    width: 320px;
     display: grid;
-    grid-template-columns: 160px 160px;
-    grid-auto-rows: 160px;
+    grid-template-columns: 150px 150px;
+    grid-auto-rows: 150px;
     grid-gap: 10px;
+    padding-bottom: 45px;
   }
   .logo-img-mobile  {
     top: 0;
+  }
+  .anim-typewriter {
+    padding-left: 2px !important;
+  }
+  .btn-animated {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
   }
 } 
 
