@@ -1436,21 +1436,20 @@ body {
   .animation-container {
     height: 150px;
     width: 150px;
-    overflow: hidden;
     margin: 0;
     margin-bottom: 2px;
   }
   .instagram-img {
     height: 150px;
   }
-  .insta-overlay {
+  /*.insta-overlay {
     height: 30px;
     bottom: 0px;
     padding-bottom: 5px;
     border-radius: 0;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
-  }
+  }*/
   .img-info {
     padding-bottom: 5px;
   }

@@ -43,6 +43,11 @@ function initialise() {
             duration: 1000,
         });
     });
+    $("#go-about2").click(function (){
+        $("#about").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
     $("#go-testimonials").click(function (){
         $("#testimonials").velocity("scroll", { 
             duration: 1000,
