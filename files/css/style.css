@@ -809,7 +809,7 @@
   /*top: 180%;*/
   background: none;
   z-index: 1;
-  height: 250px;
+  height: 300px;
   display: inline-block;
 }
 /*
@@ -1197,6 +1197,10 @@ body {
 .mobileHide {
   display: none;
 }
+.mobileHide .name-header {
+  display: none;
+}
+
 .logo-img-mobile {
   display: none;
 }
@@ -1295,7 +1299,7 @@ body {
     width: 200px;
     display: inline-block;
     position: relative;
-    top: 150px;
+    top: 0px;
   }
   .mobileHide {
     display: block;
@@ -1304,6 +1308,7 @@ body {
     color: #616161;
     top: 100%;
     left: 51%;
+    display: block;
   }
   .navbar-nav > li.mobileHide {
     display: block;
