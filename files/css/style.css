@@ -433,6 +433,8 @@
 }
 .pull-quote h2 {
   font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
   z-index: 2;
   text-align: center;
   padding-left: 15px;
