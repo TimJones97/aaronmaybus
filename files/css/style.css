@@ -786,6 +786,7 @@
   background: white;
   padding: 2px 15px 2px 15px;
   z-index: 1;
+  white-space: nowrap;
 }
 .title-center h1 {
   margin: 0;
@@ -1357,7 +1358,7 @@ body {
     padding: 0px;
   }
   .info-list li {
-    font-size: 14px;
+    font-size: 15px;
   }
   .title-block-left,
   .title-block-right {
@@ -1376,7 +1377,8 @@ body {
     border-bottom: 1px solid #d5d5d5 !important;
   }
   .title-main {
-    width: 348px;
+    width: 352px;
+    left: 51%;
   }
   .btn-animated {
     font-size: 12px;
@@ -1466,7 +1468,7 @@ body {
     right: 4px;
   }
   #instafeed {
-    width: 320px;
+    width: 310px;
     display: grid;
     grid-template-columns: 150px 150px;
     grid-auto-rows: 150px;

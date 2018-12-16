@@ -14,14 +14,44 @@ $('.navbar-nav>li>a').on('click', function(){
 
 function initialise() {
     // bind click event to all internal page anchors
-    $('a[href*="#"]').on('click', function (e) {
-        // prevent default action and bubbling
-        e.preventDefault();
-        e.stopPropagation();
-        // set target to anchor's "href" attribute
-        var target = $(this).attr('href');
-        // scroll to each target
-        $(target).velocity("scroll", 1000);
+    // $('a[href*="#"]').on('click', function (e) {
+    //     // prevent default action and bubbling
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     // set target to anchor's "href" attribute
+    //     var target = $(this).attr('href');
+    //     // scroll to each target
+    //     $(target).velocity("scroll", 1000);
+    // });
+    $("#go-home").click(function (){
+        $("#home").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-home2").click(function (){
+        $("#home").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-home3").click(function (){
+        $("#home").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-about").click(function (){
+        $("#about").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-testimonials").click(function (){
+        $("#testimonials").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-media").click(function (){
+        $("#media").velocity("scroll", { 
+            duration: 1000,
+        });
     });
 
     if (trident > 0 || edge > 0) {
