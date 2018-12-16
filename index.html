@@ -19,14 +19,17 @@
 	<title>Aaron Maybus - Brisbane Entertainer</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./files/css/pace.simple.css">
-	<link href="./files/css/style.css?v=1.1" rel="stylesheet">
+	<link href="./files/css/style.css?v=1.2" rel="stylesheet">
 </head>
 <body>
 	<div class="loading">
 	    <div class="loader-container">
-  			<img src="./files/img/logos/logo.gif">
+	    	<svg ng-attr-width="{{ctrl.size.value}}px" ng-attr-height="{{ctrl.size.value}}px" viewBox="0 0 100 100" ng-if="canvas.show=='img'" ng-attr-style="background:{{ctrl.bkcolor.value}}" width="150px" height="150px"><g ng-attr-style="transform:scale({{ctrl.scale.value}});transform-origin:50px 50px" style="transform:scale(1);transform-origin:50px 50px">
+	    	<image x="0" y="0" width="100" height="100" ng-attr-href="{{canvas.img || ''}}" ng-class="ctrl.animation.value + ' ' + ctrl.icon.value" ng-attr-style="animation-direction:{{ctrl.direction.value}};animation-play-state:{{ctrl.playstate.value}};animation-duration:{{ctrl.speed.value}}s;transform-origin: 50px 50px" style="animation-direction:normal;animation-play-state:running;animation-duration:1.73s;transform-origin: 50px 50px" class="ld ld-breath">
+	    	</image>
+	    	</g>
+	    	</svg>
 		</div>
 	</div>
 	<div class="hidden-home" id="home">
@@ -49,7 +52,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a id="go-home" href="#banner" class="navbar-left"><img class="logo-img" src="./files/img/logo.png"></a>
+				<a href="#home" class="navbar-left"><img class="logo-img" src="./files/img/logo.png"></a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
@@ -57,7 +60,7 @@
 					<li><a href="#about">ABOUT</a></li>
 					<li><a href="#testimonials">TESTIMONIALS</a></li>
 					<li><a href="#media">MEDIA</a></li>
-					<!-- <li><a href="#contact">CONTACT</a></li> -->
+					<li class="mobileHide"><img class="logo-img-mobile" src="./files/img/logo_grey.png"></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 			<div class="navbar-right">
@@ -82,7 +85,7 @@
 	<div class="title-block-spacer">
 		<div class="title-main">
 			<p class="anim-typewriter">// Brisbane Corporate Functions</p>
-			<p class="anim-typewriter2">// Events, Wedding Band and DJ</p>
+			<p class="anim-typewriter2">&nbsp;// Events, Wedding Band and DJ</p>
 			<button class="btn-animated">
 				<a href="#about">
 					<span>FIND OUT MORE</span>
@@ -97,8 +100,6 @@
      		<div class="title-center">
 				<h1>Me, Aaron</h1>
 			</div>
-     		<div class="title-vertical-line">
-     		</div>
 		</div>
 		<div class="bg_overlay">
 		</div>
@@ -113,7 +114,7 @@
 					Aaron has photographed and produced videos and performed for a wide range of events &amp; artists ranging from Original bands, Club Scenes to Gala Events throughout Melbourne and Brisbane, Australia. Aaron has worked with 120 Publishing, Ministry of Sound, Poncho TV, Sink or Swim Productions (Medibank, Multiple recording artists, Melodic Music, Queensland Brian Institute, QLD Charities (contact for more details) &amp; many entertainment companies in Queensland.
 				</p>
 				<p>
-					Currently, Aaron is a freelancer in Brisbane, Queensland producing content for different projects across Photography, Video &amp; Performance for a wide range of Companies, Charities and Music associations.
+					Currently, Aaron is a freelancer in Brisbane, Queensland producing content for different projects across Photography, Video &amp; Performance for a wide range of companies, charities and music associations.
 				</p>				
 				<section class="pull-quote">
 					<h2 id="testimonials">
@@ -165,8 +166,6 @@
      		<div class="title-center">
 				<h1>Insta feed</h1>
 			</div>
-     		<div class="title-vertical-line">
-			</div>
 		</div>
 	</div>
 	<div class="block grey_bg">
@@ -175,7 +174,7 @@
 		    </div>
 		    <div class="col-md-12">
 		    	<div class="center-middle">
-					<a class="links" id="go-home3" href="#banner"><img src="./files/img/logos/instagram-logo.svg" class="icon" alt="Instagram"></a><a class="links social_link" id="go-home4" href="#banner">View more on Instagram</a>
+					<a class="links" id="go-home3" href="https://www.instagram.com/amaybus/" target="_blank"><img src="./files/img/logos/instagram-logo.svg" class="icon" alt="Instagram"></a><a class="links social_link" id="go-home4" href="https://www.instagram.com/amaybus/" target="_blank">View more on Instagram</a>
 				</div>
 			</div>
 		</section>
@@ -195,8 +194,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="
 sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
-<script type="text/javascript" src="./files/js/lib/greensock/TweenMax.min.js"></script>
-<script src="./files/js/stylus.js"></script>
 <script src="./files/js/script.js"></script>
 <!-- <script>
     document.getElementById('promo').play(); 
@@ -207,7 +204,7 @@ sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossor
 	  userId: 51024824,
 	  accessToken: '51024824.caab68d.bb2161a6a3ed4407819398c960395c7f',
 	  resolution: 'low_resolution',
-	  template: '<a class="animation-container" href="{{link}}"><img src="{{image}}" class="instagram-img"/><div class="insta-overlay"><div class="img-info"><img src="./files/img/icons/heart.svg" class="icon-sml"/>{{likes}}</div></div></a>',
+	  template: '<a class="animation-container" href="{{link}}"><img src="{{image}}" class="instagram-img"/><div class="insta-overlay"><div class="img-info"><img src="./files/img/icons/heart.svg" class="icon-sml"/><p>{{likes}}</p></div></div></a>',
 	  limit: '12'
 	});
 	userFeed.run();

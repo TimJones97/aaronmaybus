@@ -121,7 +121,38 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-
+/* cyrillic */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Playfair Display Bold Italic'), local('PlayfairDisplay-BoldItalic'), url(https://fonts.gstatic.com/s/playfairdisplay/v13/nuFnD-vYSZviVYUb_rj3ij__anPXDTngOWwu4DRmBKY.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Playfair Display Bold Italic'), local('PlayfairDisplay-BoldItalic'), url(https://fonts.gstatic.com/s/playfairdisplay/v13/nuFnD-vYSZviVYUb_rj3ij__anPXDTngOWwu6zRmBKY.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Playfair Display Bold Italic'), local('PlayfairDisplay-BoldItalic'), url(https://fonts.gstatic.com/s/playfairdisplay/v13/nuFnD-vYSZviVYUb_rj3ij__anPXDTngOWwu6jRmBKY.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Playfair Display Bold Italic'), local('PlayfairDisplay-BoldItalic'), url(https://fonts.gstatic.com/s/playfairdisplay/v13/nuFnD-vYSZviVYUb_rj3ij__anPXDTngOWwu5DRm.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 /*-----PAGE LOAD BAR-----*/
 
 .loading {
@@ -132,6 +163,35 @@
   bottom: 0;
   background: #e7e7e7;
   z-index : 1001; 
+}
+
+.ld.ld-breath {
+    -webkit-animation: ld-breath 1s infinite;
+    animation: ld-breath 1s infinite;
+}
+
+@keyframes ld-breath {
+    0%,to {
+        -webkit-transform: scale(.86);
+        transform: scale(.86)
+    }
+
+    50% {
+        -webkit-transform: scale(1.06);
+        transform: scale(1.06)
+    }
+}
+
+@-webkit-keyframes ld-breath {
+    0%,to {
+        -webkit-transform: scale(.86);
+        transform: scale(.86)
+    }
+
+    50% {
+        -webkit-transform: scale(1.06);
+        transform: scale(1.06)
+    }
 }
 
 .btn-animated {
@@ -164,9 +224,9 @@
   font-family: 'Poppins', sans-serif;
     -webkit-animation: slide 0.8s forwards;
   animation: slide 0.8s forwards;
-  -webkit-animation-delay: 7s;
-  -moz-animation-delay: 7s;
-  animation-delay: 7s;
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  animation-delay: 6s;
   opacity: 0;
 }
 .btn-animated a {
@@ -234,24 +294,26 @@
   border-right: 2px solid rgba(255,255,255,.75);
   text-align: left;
   white-space: nowrap;
+  padding-left: 2px;
   overflow: hidden;
   /*transform: translateY(-50%);    */
 }
 
 /* Animation */
 .anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
+  animation: typewriter 3s steps(44) 1s 1 normal both,
              blinkTextCursor 500ms steps(44) infinite normal;
    /*-webkit-animation-delay: 2s;
   -moz-animation-delay: 2s;
   animation-delay: 2s;*/
 }
 .anim-typewriter2{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
+  margin-left: -5px;
+  animation: typewriter 3s steps(44) 1s 1 normal both,
              blinkTextCursor 500ms steps(44) infinite normal;
-  -webkit-animation-delay: 4s;
-  -moz-animation-delay: 4s;
-  animation-delay: 4s;
+  -webkit-animation-delay: 3.6s;
+  -moz-animation-delay: 3.6s;
+  animation-delay: 3.6s;
 }
 
 @keyframes typewriter{
@@ -302,7 +364,7 @@
   position: relative;
 }
 .bg_overlay {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.4);
   position: absolute;
   top: 0;
   left: 0;
@@ -366,31 +428,34 @@
 .pull-quote {
   position: relative;
   height: 100%;
+  margin-top: 40px;
+  margin-bottom: 20px;
   display: block;
 }
 .pull-quote h2 {
-  font-family: 'Courgette', cursive;
+  font-family: 'Playfair Display', serif;
   z-index: 2;
-  padding-left: 50px;
-  padding-right: 50px;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 10px;
 }
 .left-quote {
   position: absolute;
   height: 30px;
   width: 30px;
   left: 0;
-  top: 0;
+  top: -10px;
   z-index: 1;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 .right-quote {
   position: absolute;
   height: 30px;
   width: 30px;
   right: 0;
-  bottom: 0;
+  bottom: 10px;
   z-index: 1;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 .text_bg {
   background: url('../img/text_bg.jpg');
@@ -503,6 +568,7 @@
   margin-bottom: 30px;
   border-radius: 6px;
   transition: all 0.3s ease;
+  cursor: grab;
   /*border: 2px solid white;*/
   -webkit-perspective: 1000;
 }
@@ -654,7 +720,8 @@
   color: white;
   font-size: 20px;
   position: absolute;
-  padding-right: 12px;
+  padding-right: 5px;
+  padding-top: 10px;
   width: 100%;
   top: 50%;
   left: 50%;
@@ -662,6 +729,12 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+.img-info p {
+  display: inline-block;
+  /*padding-top: 2px;*/
+  font-size: 15px;
+  /*vertical-align: middle;*/
 }
 .social_link {
   margin-left: 10px;
@@ -773,6 +846,12 @@ body {
   background-attachment: fixed;
 }
 
+::after, ::before {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
 /*-----------NAVBAR STYLES-------------*/
 /* Navbar */
 .navbar-default {
@@ -835,7 +914,11 @@ body {
   top: 13px;
   position: absolute;
 }
-
+.navbar-left {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
 .navbar-nav li {
   float: none;
   display: inline-block;
@@ -917,13 +1000,29 @@ body {
   background: transparent;
 }
 
-
-.active {
-  border-bottom: 3px solid #3b3b3b;
-  transition: all 0.2s ease;
-}
 .navbar-default.smaller .navbar-nav > li > a {
   color: #3b3b3b;
+  transition: width .3s;
+}
+.navbar-default .navbar-nav > li > a::after,
+.navbar-default.smaller .navbar-nav > li > a::after {
+  position: absolute;
+  bottom: -3px;
+  content: '';
+  display: block;
+  background-color: #3700a5;
+  transition: width .3s;
+  width: .001%;
+  height: 3px;
+  left: 0;
+}
+.navbar-default .navbar-nav > li > a::after {
+  bottom: -4px;
+}
+
+.navbar-default .navbar-nav > li > a:hover::after,
+.navbar-default.smaller .navbar-nav > li > a:hover::after {
+  width: 100%;
 }
 .navbar-default .navbar-nav>li>a {
   color: white;
@@ -938,6 +1037,7 @@ body {
    -moz-transition: all 0.4s;
   transition: all 0.4s;
   color: #3700a5; 
+
 }
 .navbar-default.smaller .navbar-nav > li > a:hover,
 .navbar-default.smaller .navbar-nav > li > a:focus  {
@@ -1036,7 +1136,12 @@ body {
 .navbar-nav {
   float: right;
 }
-
+.mobileHide {
+  display: none;
+}
+.logo-img-mobile {
+  display: none;
+}
 @media all and (max-width: 991px) {
   .navbar-toggle {
     top: 32px;
@@ -1099,17 +1204,30 @@ body {
   .caption {
     width: 100%;
     border-radius: 0px;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
   }
   .media-title-block {
     height: 50vh;
   }
 }
 @media (max-width: 767px) {
-  .bg_main {
-    /* background-image: url(../img/bg_main.jpg); */
+  /*.bg_main {
+     background-image: url(../img/bg_main.jpg); 
     height: 90vh;
+  }*/
+  .navbar-left {
+    display: none;
+  }
+  .logo-img-mobile {
+    width: 200px;
+    display: inline-block;
+    position: relative;
+  }
+  .mobileHide {
+    display: block;
+  }
+  .navbar-nav > li.mobileHide {
+    display: block;
+    border-bottom: 0px !important;
   }
 }
 @media all and (max-width: 479px) {
@@ -1155,17 +1273,13 @@ body {
     left: 46.5%;
   }
   .title-main {
-    width: 295px;
+    width: 345px;
   }
-  .title-main p {
-    font-size: 39px;
-    letter-spacing: 1px;
+  .btn-animated {
+    font-size: 12px;
   }
   h2 {
-    font-size: 25px;
-  }
-  .bg_main {
-    height: 100vh !important;
+    font-size: 26px;
   }
   .navbar-nav {
     margin: 0px -15px;
@@ -1188,7 +1302,8 @@ body {
     line-height: 60px;
   }
   .title-main p  {
-    font-size: 26px;
+    font-size: 21px;
+    margin-bottom: 4px;
   }
   .slider {
     height: 315px;
@@ -1211,7 +1326,7 @@ body {
   .caption {
     width: 100%;
     height: 315px;
-    border-radius: 6px;
+    /*border-radius: 6px;*/
   }
   .animation-container {
     height: 150px;
@@ -1247,6 +1362,9 @@ body {
   .navbar-collapse {
      padding-right: 0px; 
      padding-left: 0px; 
+  } 
+  .navbar-right {
+    right: 4px;
   }
 } 
 
