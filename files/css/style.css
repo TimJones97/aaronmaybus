@@ -205,11 +205,11 @@
   border-width: 3px;
   border-style: solid;
   font-weight: 900;
-  display: inline-block;
-  margin-bottom: 0;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
   font-weight: normal;
   text-align: center;
-  margin-top: 15px;
   cursor: pointer;
   background-image: none;
   border: 3px solid white;
@@ -1479,11 +1479,6 @@ body {
   }
   .anim-typewriter {
     padding-left: 2px !important;
-  }
-  .btn-animated {
-    display: block;
-    margin: 0 auto;
-    margin-top: 30px;
   }
 } 
 
