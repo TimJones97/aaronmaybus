@@ -7,6 +7,19 @@ var trident = ua.indexOf('Trident/');
 var edge = ua.indexOf('Edge/');
 var spacerHeight = $('.title-block-spacer').height();  
 
+jQuery.expr[':'].regex = function(elem, index, match) {
+    var matchParams = match[3].split(','),
+        validLabels = /^(data|css):/,
+        attr = {
+            method: matchParams[0].match(validLabels) ? 
+                        matchParams[0].split(':')[0] : 'attr',
+            property: matchParams.shift().replace(validLabels,'')
+        },
+        regexFlags = 'ig',
+        regex = new RegExp(matchParams.join('').replace(/^\s+|\s+$/g,''), regexFlags);
+    return regex.test(jQuery(elem)[attr.method](attr.property));
+}
+
 //collapse the navbar upon selection from hamburger menu
 $('.navbar-nav>li>a').on('click', function(){
     $('.navbar-collapse').collapse('hide');
@@ -105,10 +118,10 @@ function initialise() {
     $('.jarallax-sml').jarallax({
       speed: 0.5
     });   
+    $("div:regex(id, .*jarallax-container-.*)").css({"z-index": "unset"});
     if(is_safari || is_edge_or_ie){
-      // document.getElementById('jarallax-container-0').style.zIndex="unset";
-      // document.getElementById('jarallax-container-1').style.zIndex="unset";
-    }    
+      $('.jarallax-img').addClass('edge-compatibility');
+    }
     $('body').scrollspy({
       target: '#topnav',
       offset: 50
@@ -144,7 +157,6 @@ $(window).scroll(function() {
       $('.title-block-main').css('top', '-53px');
       // $('.navbar-default').removeClass('solid');
     } 
-
 });
 //Check if window is resized to less than desktop res width, 
 //If it is, make navbar opaque
@@ -208,8 +220,6 @@ $(window).scroll(function () {
 
 $(window).scroll(function() {
     if(is_safari || is_edge_or_ie){
-      document.getElementById('jarallax-container-0').style.zIndex="unset";
-      document.getElementById('jarallax-container-1').style.zIndex="unset";
     }
     else{
     }

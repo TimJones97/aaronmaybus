@@ -1029,6 +1029,9 @@ body {
 #jarallax-container-0 .jarallax-img {
   top: 50px !important;
 }
+.edge-compatibility {
+  transform: translateY(0px) translateZ(0px) !important;
+}
 #navbar {
   background-color: transparent;
 }
