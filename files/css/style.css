@@ -849,13 +849,13 @@
 /* RESPONSIVE DIVS */
 
 html {
-    overflow-x: hidden;
-}
-
-body {
   overflow-x: hidden;
-  width: 100%;
+  width:100%;
 }
+body {
+  width: 100%;
+  overflow-x: hidden;
+} 
 
 .fixed_bg {
   position: fixed;
@@ -1031,6 +1031,7 @@ body {
 }
 .edge-compatibility {
   transform: translateY(0px) translateZ(0px) !important;
+  height: 100% !important;
 }
 #navbar {
   background-color: transparent;
@@ -1239,9 +1240,6 @@ body {
   }
   .navbar-default.smaller .navbar-nav > li > a.active {
     border-bottom: none;
-  }
-  body {
-      background-position: 60%;
   }
   .title-main {
     top: 50%;
