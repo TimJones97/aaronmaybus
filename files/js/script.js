@@ -43,41 +43,46 @@ function initialise() {
     //     // scroll to each target
     //     $(target).velocity("scroll", 1000);
     // });
-    $("#go-home").click(function (){
-        $("#home").velocity("scroll", { 
-            duration: 1000,
-        });
+    // All animations will take exactly 500ms
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 1000,
+      speedAsDuration: true
     });
-    $("#go-home2").click(function (){
-        $("#home").velocity("scroll", { 
-            duration: 1000,
-        });
-    });
-    $("#go-home3").click(function (){
-        $("#home").velocity("scroll", { 
-            duration: 1000,
-        });
-    });
-    $("#go-about").click(function (){
-        $("#about").velocity("scroll", { 
-            duration: 1000,
-        });
-    });
-    $("#go-about2").click(function (){
-        $("#about").velocity("scroll", { 
-            duration: 1000,
-        });
-    });
-    $("#go-testimonials").click(function (){
-        $("#testimonials").velocity("scroll", { 
-            duration: 1000,
-        });
-    });
-    $("#go-media").click(function (){
-        $("#media").velocity("scroll", { 
-            duration: 1000,
-        });
-    });
+    // $("#go-home").click(function (){
+    //     $("#home").velocity("scroll", { 
+    //         duration: 1000,
+    //     });
+    // });
+    // $("#go-home2").click(function (){
+    //     $("#home").velocity("scroll", { 
+    //         duration: 1000,
+    //     });
+    // });
+    // $("#go-home3").click(function (){
+    //     $("#home").velocity("scroll", { 
+    //         duration: 1000,
+    //     });
+    // });
+    // $("#go-about").click(function (){
+    //     $("#about").velocity("scroll", { 
+    //         duration: 1000,
+    //     });
+    // });
+    // $("#go-about2").click(function (){
+    //     $("#about").velocity("scroll", { 
+    //         duration: 1000,
+    //     });
+    // });
+    // $("#go-testimonials").click(function (){
+    //     $("#testimonials").velocity("scroll", { 
+    //         duration: 1000,
+    //     });
+    // });
+    // $("#go-media").click(function (){
+    //     $("#media").velocity("scroll", { 
+    //         duration: 1000,
+    //     });
+    // });
 
     if (trident > 0 || edge > 0) {
       is_edge_or_ie = true;
