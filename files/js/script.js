@@ -33,57 +33,11 @@ $('.navbar-nav>li>a').on('click', function(){
 });
 
 function initialise() {
-    // bind click event to all internal page anchors
-    // $('a[href*="#"]').on('click', function (e) {
-    //     // prevent default action and bubbling
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    //     // set target to anchor's "href" attribute
-    //     var target = $(this).attr('href');
-    //     // scroll to each target
-    //     $(target).velocity("scroll", 1000);
-    // });
     // All animations will take exactly 500ms
     var scroll = new SmoothScroll('a[href*="#"]', {
       speed: 1000,
       speedAsDuration: true
     });
-    // $("#go-home").click(function (){
-    //     $("#home").velocity("scroll", { 
-    //         duration: 1000,
-    //     });
-    // });
-    // $("#go-home2").click(function (){
-    //     $("#home").velocity("scroll", { 
-    //         duration: 1000,
-    //     });
-    // });
-    // $("#go-home3").click(function (){
-    //     $("#home").velocity("scroll", { 
-    //         duration: 1000,
-    //     });
-    // });
-    // $("#go-about").click(function (){
-    //     $("#about").velocity("scroll", { 
-    //         duration: 1000,
-    //     });
-    // });
-    // $("#go-about2").click(function (){
-    //     $("#about").velocity("scroll", { 
-    //         duration: 1000,
-    //     });
-    // });
-    // $("#go-testimonials").click(function (){
-    //     $("#testimonials").velocity("scroll", { 
-    //         duration: 1000,
-    //     });
-    // });
-    // $("#go-media").click(function (){
-    //     $("#media").velocity("scroll", { 
-    //         duration: 1000,
-    //     });
-    // });
-
     if (trident > 0 || edge > 0) {
       is_edge_or_ie = true;
     }
@@ -161,23 +115,7 @@ $(window).resize(function () {
     initialise();
     var currentSlide = $('.center').slick('slickCurrentSlide');
     currentSlide = $('.center').slick('slickGoTo', currentSlide + 1);
-    // if(is_safari || is_edge_or_ie){
-    //   document.getElementById('jarallax-container-0').style.zIndex="unset";
-    //   document.getElementById('jarallax-container-1').style.zIndex="unset";
-    // }
 });
-
-//Script to fade out the post when scrolled past
-// $(window).scroll(function () {
-//     var scrollTop = $(window).scrollTop() - 100;
-//     var height = ($(window).height() / 5);
-//     $('.title-block-main').css({
-//         'opacity': ((height - scrollTop) / (height))
-//     });
-//     // $('.title-main').css({
-//     //     'opacity': ((height - scrollTop) / (height))
-//     // });
-// });
 
 //Script to fade out the banner when scrolled past
 $(window).scroll(function () {
@@ -189,17 +127,7 @@ $(window).scroll(function () {
     $('.bottom').css({
         'opacity': ((height - scrollTop) / (height))
     });
-    // $('.jarallax-container-1').css({
-    //     'z-index': 'unset !important'
-    // });
-    //  $('.jarallax').css({
-    //     'z-index': 'unset !important'
-    // });
     $('.jarallax').removeAttr( 'style' );
-    // document.getElementById('jarallax-container-0').style.zIndex="unset";
-    // document.getElementById('jarallax-container-1').style.zIndex="unset";
-    // document.getElementById('jarallax-container-2').style.zIndex="unset";
-    // $('.card-img').removeAttr( 'style' )
 });
 
 
@@ -214,8 +142,6 @@ $(window).scroll(function() {
 Pace.restart();
 Pace.on("done", function(){
    var y = $(window).scrollTop();  //your current y position on the page
-   $(window).scrollTop(y+1);
-   // $(window).scrollTop();
    $('.loading').slideUp("slow", function() {
     });
     // Only show main text banner after loading complete
