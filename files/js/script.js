@@ -113,7 +113,7 @@ function initialise() {
     $("div:regex(id, .*jarallax-container-.*)").css({"z-index": "unset"});
     // Check if not on Chrome, and if on Edge/Safari not on mobile
     // If on mobile keep parallax enabled
-    if((is_safari || is_edge_or_ie) && !mobilecheck()){
+    if((is_edge_or_ie) && !mobilecheck()){
       $('.jarallax-img').addClass('edge-compatibility');
     }
 
